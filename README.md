@@ -1,4 +1,4 @@
-# SimpleFolderIcon
+# SimpleFolderIcon-Plugins
 
 [![GitHub all releases](https://img.shields.io/github/downloads/SeaeeesSan/SimpleFolderIcon/total)](https://github.com/SeaeeesSan/SimpleFolderIcon/releases)
 [![GitHub license](https://img.shields.io/github/license/SeaeeesSan/SimpleFolderIcon)](https://github.com/SeaeeesSan/SimpleFolderIcon/blob/master/LICENSE)
@@ -6,6 +6,10 @@
 ### 日本語版は[こちら](README_jp.md)
 
 ![image](https://user-images.githubusercontent.com/68797964/132967661-a6aff48e-4605-417f-8f4c-367d9172ed0f.png)
+
+# How does this differ from SimpleFolderIcon?
+
+This version of the plugin reads from the `/Assets/Plugins/SimpleFolderIcon/Icons` path instead of `/Assets/SimpleFolderIcon/Icons`. This way you do not have the plugin itself ruining the vibe of your root folder.
 
 ## Features
 
