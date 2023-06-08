@@ -6,7 +6,7 @@ namespace SimpleFolderIcon.Editor
 {
     public class IconDictionaryCreator : AssetPostprocessor
     {
-        private const string AssetsPath = "SimpleFolderIcon/Icons";
+        private const string AssetsPath = "Plugins/SimpleFolderIcon/Icons";
         internal static Dictionary<string, Texture> IconDictionary;
 
         private static void OnPostprocessAllAssets(string[] importedAssets, string[] deletedAssets, string[] movedAssets, string[] movedFromAssetPaths)
@@ -44,11 +44,11 @@ namespace SimpleFolderIcon.Editor
         {
             var dictionary = new Dictionary<string, Texture>();
 
-            var dir = new DirectoryInfo(Application.dataPath + "/" + AssetsPath);
+            var dir = new DirectoryInfo(Application.dataPath + "/" + AssetsPath); // <--- File not found
             FileInfo[] info = dir.GetFiles("*.png");
             foreach(FileInfo f in info)
             {
-                var texture = (Texture)AssetDatabase.LoadAssetAtPath($"Assets/SimpleFolderIcon/Icons/{f.Name}", typeof(Texture2D));
+                var texture = (Texture)AssetDatabase.LoadAssetAtPath($"Assets/Plugins/SimpleFolderIcon/Icons/{f.Name}", typeof(Texture2D));
                 dictionary.Add(Path.GetFileNameWithoutExtension(f.Name),texture);
             }
 
